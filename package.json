@@ -1,0 +1,36 @@
+{
+  "name": "node-boleto-rm",
+  "version": "1.0.0",
+  "description": "Geração Boleto no Node.js",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha \"./test/unit/**/*.spec.js\" && mocha \"./test/integration/**/*.spec.js\" && mocha \"./test/e2e/**/*.spec.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtairone/node-boleto-rm.git"
+  },
+  "dependencies": {
+    "ejs": "2.5.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-datetime": "^1.4.1",
+    "chai-string": "^1.3.0",
+    "chai-subset": "^1.4.0",
+    "eslint": "^3.12.2",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "mocha": "^3.2.0",
+    "moment": "https://github.com/pagarme/moment/archive/0.0.5.tar.gz",
+    "ramda": "^0.23.0"
+  },
+  "author": "Tairone Morais",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jtairone/node-boleto-rm.git/issues"
+  },
+  "homepage": "https://github.com/jtairone/node-boleto-rm.git"
+}
