@@ -32,7 +32,7 @@ var boleto = new Boletorm({
   
   'banco': `santander`, // nome do banco dentro da pasta 'banks'
   'data_emissao': new Date(), //data emissão (exemplo gera data hoje)
-  //'logo': '' //link para logo da empresa,
+  'logoURLEmp': '' //link para logo da empresa * de preferencia somente logo sem textos
   'data_vencimento': new Date(new Date().getTime() + 5 * 24 * 3600 * 1000), // 5 dias futuramente,
   'valor': 1500, // R$ 15,00 (valor em centavos)
   'jurosdia': `${ret.rows[i].JUROSDIA}`,
