@@ -35,10 +35,10 @@ var boleto = new Boletorm({
   'logoURLEmp': '' //link para logo da empresa * de preferencia somente logo sem textos
   'data_vencimento': new Date(new Date().getTime() + 5 * 24 * 3600 * 1000), // 5 dias futuramente,
   'valor': 1500, // R$ 15,00 (valor em centavos)
-  'jurosdia': `${ret.rows[i].JUROSDIA}`,
+  'jurosdia': `0,43`, //valor do juros diario do titulo
   'nosso_numero': `1234567`,
   'barcode_data':  `3435645645567567` //dados do codigo de barras,
- // 'barcode_count': `${i}`, //utilizo para gerar mais de um titulo ao mesmo tempo analisar código
+ // 'barcode_count': `${i}`, //caso vá utilizar laço de repetição passar o index para gerar mais de um boleto por vez
   'linha_digitavel': `456756878678678687`,
   'numero_documento': `1234567`,
   'instrucoes': `INSTRUÇÕES DO BOLETO`,
