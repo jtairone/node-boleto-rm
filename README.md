@@ -3,10 +3,11 @@ node-boleto-rm
 <!-- 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) -->
 
-Geração de boleto bancário em Node.js. Os algoritmos de geração da linha digitável e do código de barras foram inspirados no [boletophp](https://github.com/BielSystems/boletophp).
+**Geração de boleto bancário em Node.js. Os algoritmos de geração da linha digitável e do código de barras foram inspirados no [boletophp](https://github.com/BielSystems/boletophp).
 
 Projeto é um fork do node-boleto só acrescentado outros layouts de impressão de outros bancos que necessitei ai vi a necessidade de criar este projeto para mim.
 
+**No caso estou utilizando para após o boleto ser gerado no ERP busco os dados no banco de dados do mesmo e consiga gerar online para o cliente em alguma plataforma desenvolvida para este propositos, pois foi exatamente o cenario que precisei e tinha esta usando varios pacotes ai decide construir um só.
 ## Bancos suportados (layout's impressão de boletos)
 
 - Santander
@@ -14,6 +15,7 @@ Projeto é um fork do node-boleto só acrescentado outros layouts de impressão 
 - Brasil
 - Caixa
 - Daycoval
+- Itau
 
 ## Instalação
 
@@ -24,6 +26,8 @@ npm install node-boleto-rm
 ## Exemplo de uso
 
 Emitindo um boleto:
+
+* os dados podem vir de uma base de dados só lembrar de olhar no pacote tem a pasta banks os nomes dos banco suportados ai no construtor Boletorm lembrar passar a 'banco': 'nomedobanco' nome do banco quer gerar a partir dos dados informados, aonde pode ate fazer isso direto na query e já retornar tal informação e somente alimentar banco com este valor. Conforma mostrado abaixo.
 
 ```javascript
 var Boletorm = require('node-boletor-rm').Boleto;

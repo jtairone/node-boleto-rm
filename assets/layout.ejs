@@ -61,7 +61,11 @@
   .pL6{padding-left:6px}
   .pL10{padding-left:10px}
   .imgLogo{width:150px}
+<% if(codigo_banco != 341){ %>
   .imgLogo img{width:150px;height:40px}
+<% } else { %>
+   .imgLogo img{width:100px;height:60px}
+<% } %>
   .imgLogoEmp img{width:50px;}
   .barra{width:2px;height:15px;;background-color:#000;}
   .rBb td{border-bottom:solid 1px #000}
