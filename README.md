@@ -10,12 +10,12 @@ Projeto é um fork do node-boleto só acrescentado outros layouts de impressão 
 **No caso estou utilizando para após o boleto ser gerado no ERP busco os dados no banco de dados do mesmo e consiga gerar online para o cliente em alguma plataforma desenvolvida para este propositos, pois foi exatamente o cenario que precisei e tinha esta usando varios pacotes ai decide construir um só.
 ## Bancos suportados (layout's impressão de boletos)
 
-- Santander
-- Bradesco
-- Brasil
-- Caixa
-- Daycoval
-- Itau
+- Santander - 33
+- Bradesco  - 237
+- Brasil    - 1
+- Caixa     - 104
+- Daycoval  - 707
+- Itau      - 341
 
 ## Instalação
 
@@ -27,14 +27,14 @@ npm install node-boleto-rm
 
 Emitindo um boleto:
 
-* os dados podem vir de uma base de dados só lembrar de olhar no pacote tem a pasta banks os nomes dos banco suportados ai no construtor Boletorm lembrar passar a 'banco': 'nomedobanco' nome do banco quer gerar a partir dos dados informados, aonde pode ate fazer isso direto na query e já retornar tal informação e somente alimentar banco com este valor. Conforma mostrado abaixo.
+* os dados podem vir de uma base de dados só lembrar de olhar no pacote tem a pasta banks os número dos banco suportados ai no construtor Boletorm lembrar passar a 'banco': 'número do banco' Número do banco quer gerar a partir dos dados informados, aonde pode ate fazer isso direto na query e já retornar tal informação e somente alimentar banco com este valor. Conforma mostrado abaixo.
 
 ```javascript
 var Boletorm = require('node-boletor-rm').Boleto;
 
 var boleto = new Boletorm({
   
-  'banco': `santander`, // nome do banco dentro da pasta 'banks'
+  'banco': '33', // nome do banco dentro da pasta 'banks'
   'data_emissao': new Date(), //data emissão (exemplo gera data hoje)
   'logoURLEmp': '' //link para logo da empresa * de preferencia somente logo sem textos
   'data_vencimento': new Date(new Date().getTime() + 5 * 24 * 3600 * 1000), // 5 dias futuramente,
