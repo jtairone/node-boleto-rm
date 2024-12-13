@@ -344,11 +344,11 @@
                 <div class="t">(-) Outras deduções</div>
                 <div class="c BB"></div>
                 <div class="t">(+) Mora / Multa</div>
-                <div class="c BB"></div>
-                <div class="t">(+) Outros acréscimos</div>
-                <div class="c BB"></div>
+                <div class="c BB Ar"><%= formatAmount(boleto['multa']) %></div>
+                <div class="t">(+) Outros acréscimos / Juros</div>
+                <div class="c BB Ar"><%= formatAmount(boleto['juros']) %></div>
                 <div class="t">(=) Valor cobrado</div>
-                <div class="c"></div>
+                <div class="c Ar"><%= formatAmount(boleto['valorcobrado']) %></div>
             </td>
         </tr>
     </table><table class="w666">

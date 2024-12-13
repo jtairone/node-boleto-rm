@@ -1,7 +1,8 @@
 node-boleto-rm
 =============
-<!-- 
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) -->
+Correção 14/12/2024, acrescentado ai lauout a para mostrar cobrança de Juros, Multa e o valor total caso o boleto esteja vencido consultar e passar os valor conforme descrito abaixo!
+#
+
 
 **Geração de boleto bancário em Node.js. Os algoritmos de geração da linha digitável e do código de barras foram inspirados no [boletophp](https://github.com/BielSystems/boletophp).
 
@@ -38,8 +39,10 @@ var boleto = new Boletorm({
   'data_emissao': new Date(), //data emissão (exemplo gera data hoje)
   'logoURLEmp': '' //link para logo da empresa * de preferencia somente logo sem textos
   'data_vencimento': new Date(new Date().getTime() + 5 * 24 * 3600 * 1000), // 5 dias futuramente,
-  'valor': 1500, // R$ 15,00 (valor em centavos)
-  'jurosdia': `0,43`, //valor do juros diario do titulo
+ 'valor': `198450`, // R$ 1984,50 (valor sem separador de casas decimais)
+ 'multa': `2778`, //passar 0 ou - ou caso tenha multa passar o valor também sem separador de casas decimais 
+ 'juros': `19845`, //caso tenha juros passar o valor ou zero
+ 'valorcobrado': `221073`, //valor + juros + multa = R$ 2.210,73
   'nosso_numero': `1234567`,
   'barcode_data':  `3435645645567567` //dados do codigo de barras,
  // 'barcode_count': `${i}`, //caso vá utilizar laço de repetição passar o index para gerar mais de um boleto por vez
